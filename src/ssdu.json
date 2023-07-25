@@ -1,0 +1,245 @@
+{
+  "/": {
+    "type": "Layout",
+    "props": {
+      "style": {
+        "padding": "20px",
+        "border": "1px solid",
+        "gap": "6px",
+        "flexDirection": "column",
+        "width": "500px"
+      }
+    },
+    "children": [
+      {
+        "type": "Button",
+        "props": {
+          "title": "빨간불",
+          "color": "red"
+        },
+        "events": {
+          "onClick": { "route": "/cancel", "actionType": "route" }
+        }
+      },
+      {
+        "type": "Button",
+        "props": {
+          "title": "노란불",
+          "color": "orange"
+        },
+        "events": {
+          "onClick": { "route": "/submit", "actionType": "route" }
+        }
+      },
+      {
+        "type": "Button",
+        "props": {
+          "title": "초록불",
+          "color": "green"
+        },
+        "events": {
+          "onClick": { "route": "/Hi", "actionType": "route" }
+        }
+      },
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "position": "fixed",
+            "top": "50%",
+            "left": "50%",
+            "transform": "translate(-50%, -50%)",
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column",
+            "width": "300px"
+          }
+        },
+        "children": [
+          {
+            "type": "Button",
+            "props": {
+              "title": "빨간불",
+              "color": "red"
+            },
+            "events": {
+              "onClick": { "route": "/cancel", "actionType": "route" }
+            }
+          },
+          {
+            "type": "Button",
+            "props": {
+              "title": "노란불",
+              "color": "orange"
+            },
+            "events": {
+              "onClick": { "route": "/submit", "actionType": "route" }
+            }
+          },
+          {
+            "type": "Button",
+            "props": {
+              "title": "민트불",
+              "color": "mint"
+            },
+            "events": {
+              "onClick": { "route": "/submit", "actionType": "route" }
+            }
+          },
+          {
+            "type": "Button",
+            "props": {
+              "title": "초록불",
+              "color": "green"
+            },
+            "events": {
+              "onClick": { "route": "/Hi", "actionType": "route" }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "/cancel": {
+    "type": "Layout",
+    "props": {
+      "style": {
+        "padding": "10px",
+        "border": "1px solid",
+        "gap": "6px",
+        "flexDirection": "column",
+        "width": "400px"
+      }
+    },
+    "children": [
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      },
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      },
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      }
+    ]
+  },
+  "/submit": {
+    "type": "Layout",
+    "props": {
+      "style": {
+        "padding": "10px",
+        "border": "1px solid",
+        "gap": "6px",
+        "flexDirection": "column",
+        "width": "400px"
+      }
+    },
+    "children": [
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      },
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      },
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      }
+    ]
+  },
+  "/Hi": {
+    "type": "Layout",
+    "props": {
+      "style": {
+        "padding": "10px",
+        "border": "1px solid",
+        "gap": "6px",
+        "flexDirection": "column",
+        "width": "400px"
+      }
+    },
+    "children": [
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      },
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      },
+      {
+        "type": "Layout",
+        "props": {
+          "style": {
+            "padding": "10px",
+            "border": "1px solid",
+            "gap": "6px",
+            "flexDirection": "column"
+          }
+        }
+      }
+    ]
+  }
+}

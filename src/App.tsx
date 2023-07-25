@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+
+import * as ComponentList from "./components";
+import serverData from "./ssdu.json";
+import DynamicElement, { Element } from "./components/DynamicElement";
+import { useLocation } from "react-router-dom";
+
+export type Pages = "/" | "/cancel";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [elementJSON, setElementJSON] = useState<Element | null>(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const pathname = location.pathname as Pages;
+    if (serverData[pathname]) {
+      setElementJSON({ ...serverData[pathname] });
+    } else {
+      throw Error("잘못된 페이지 정보입니다.");
+    }
+  }, [location]);
+
+  if (!elementJSON) {
+    return <div>Loading...</div>;
+  }
+
+  return <DynamicElement element={elementJSON} componentsMap={ComponentList} />;
 }
 
 export default App;
